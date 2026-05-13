@@ -1,11 +1,14 @@
 #wrapper{
     border: 1px solid blue;
-
+    width:100%;
+    overflow:auto;
+}
+#wrapper div{
+    width:50%;  
+    float:left;
 }
 #tiedot{
     float:right;
-    width:120px;
-    height:120px;
 }
 #kuva{
     float:left;
