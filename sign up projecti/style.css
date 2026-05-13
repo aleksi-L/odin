@@ -1,6 +1,12 @@
-.kuva {
-    text-align: left;
+#wrapper{
+    border: 1px solid blue;
+
 }
-.tiedot{
-    text-align: right;
+#tiedot{
+    float:right;
+    width:120px;
+    height:120px;
+}
+#kuva{
+    float:left;
 }
