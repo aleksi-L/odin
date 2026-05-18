@@ -9,7 +9,11 @@
 }
 #tiedot{
     float:right;
+    
 }
 #kuva{
     float:left;
+}
+Body{
+    background-color: gainsboro;
 }
