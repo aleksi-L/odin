@@ -1,24 +1,23 @@
 #wrapper{
-    border: 1px solid blue;
     width:100%;
     overflow:auto;
+    position: absolute;
 }
 #wrapper div{
     width:50%;  
     float:left;
 }
-#tiedot{
-    float:right;
-    
-}
+
 #kuva{
     float:left;
 }
 Body{
     background-color: gainsboro;
+    
 }
-.form{
-    column-count: 2;
-    column-gap: 20px;
-   background-color:white;
+.grid{
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
