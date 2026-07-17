@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+ <link rel="stylesheet" href="styles.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Layout</title>
+  <!-- Material Icons for the sidebar and card actions -->
+  <link href="https://googleapis.com" rel="stylesheet">
+  <style>
+    /* Global Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: #e2e8f0;
+      color: #1e293b;
+      height: 100vh;
+    }
+
+    /* Main Page Grid Layout */
+    .container {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      grid-template-rows: 150px 1fr;
+      height: 100vh;
+    }
+
+    /* 1. Sidebar Styles */
+    .sidebar {
+      background-color: #1a8ad2;
+      color: white;
+      grid-row: 1 / -1;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .nav-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      padding: 0.25rem 0;
+    }
+    .nav-item:hover {
+      opacity: 0.8;
+    }
+
+    /* 2. Header Styles */
+    .header {
+      background-color: white;
+      grid-column: 2 / -1;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 3rem;
+      z-index: 10;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: #e2e8f0;
+      border-radius: 20px;
+      padding: 0.4rem 1rem;
+      width: 60%;
+      gap: 0.5rem;
+    }
+    .search-bar input {
+      border: none;
+      background: none;
+      outline: none;
+      width: 100%;
+    }
+    .header-profile {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .header-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .avatar {
+      width: 60px;
+      height: 60px;
+      background-color: #fcd34d;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+    }
+    .user-text p {
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .user-text h1 {
+      font-size: 1.3rem;
+    }
+    .btn-new {
+      background-color: #1a8ad2;
+      color: white;
+      border: none;
+      padding: 0.5rem 2rem;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* 3. Main Content & Project Grid Styles */
+    .main-content {
+      grid-column: 2 / -1;
+      padding: 2rem 3rem;
+      overflow-y: auto;
+    }
+    .main-content h2 {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 2rem 1.5rem 1.5rem 1.5rem;
+      border-left: 8px solid #f59e0b;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 180px;
+    }
+    .card-text h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+    .card-text p {
+      color: #64748b;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+    .card-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      color: #334155;
+    }
+    .card-actions span {
+      cursor: pointer;
+    }
+    .card-actions span:hover {
+      color: #1a8ad2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo">
+        <span class="material-icons-outlined">dashboard</span>
+        Dashboard
+      </div>
+      
+      <nav class="nav-group">
+        <a href="#" class="nav-item"><span class="material-icons-outlined">home</span>Home</a>
+        <a href="#" class="nav-item"><span class="material-icons-outlined">badge</span>Profile</a>
+        <a href="#" class="nav-item"><span class="material-icons-outlined">chat</span>Messages</a>
+        <a href="#" class="nav-item"><span class="material-icons-outlined">schedule</span>History</a>
+        <a href="#" class="nav-item"><span class="material-icons-outlined">task</span>Tasks</a>
+        <a href="#" class="nav-item"><span class="material-icons-outlined">groups</span>Communities</a>
+      </nav>
+
+      <nav class="nav-group">
+        <a href="#" class="nav-item"><span class="material-icons-outlined">settings</span>Settings</a>
+        <a href="#" class="nav-item"><span class="material-icons-outlined">help_center</span>Support</a>
+        <a href="#" class="nav-item"><span class="material-icons-outlined">verified_user</span>Privacy</a>
+      </nav>
+    </aside>
+
+    <!-- Top Header -->
+    <header class="header">
+      <div class="header-top">
+        <div class="search-bar">
+          <span class="material-icons-outlined">search</span>
+          <input type="text" aria-label="Search">
+        </div>
+        <div class="header-profile">
+          <span class="material-icons-outlined">notifications_active</span>
+          <div class="avatar" style="width: 40px; height: 40px; font-size: 1.2rem;">🐱</div>
+          <strong>Morgan Oakley</strong>
+        </div>
+      </div>
+      
+      <div class="header-bottom">
+        <div class="user-info">
+          <div class="avatar">🐱</div>
+          <div class="user-text">
+            <p>Hi there,</p>
+            <h1>Morgan Oakley (@morgan)</h1>
+          </div>
+        </div>
+        <button class="btn-new">New</button>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <h2>Your Projects</h2>
+      
+      <div class="projects-grid">
+        
+        <!-- Card 1 -->
+        <article class="project-card">
+          <div class="card-text">
+            <h3>Super Cool Project</h3>
+            <p>Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+          </div>
+          <div class="card-actions">
+            <span class="material-icons-outlined">star_border</span>
+            <span class="material-icons-outlined">visibility</span>
+            <span class="material-icons-outlined">account_tree</span>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="project-card">
+          <div class="card-text">
+            <h3>Less Cool Project</h3>
+            <p>Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius pellentesque lacus.</p>
+          </div>
+          <div class="card-actions">
+            <span class="material-icons-outlined">star_border</span>
+            <span class="material-icons-outlined">visibility</span>
+            <span class="material-icons-outlined">account_tree</span>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="project-card">
+          <div class="card-text">
+            <h3>Impossible App</h3>
+            <p>In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p>
+          </div>
+          <div class="card-actions">
+            <span class="material-icons-outlined">star_border</span>
+            <span class="material-icons-outlined">visibility</span>
+            <span class="material-icons-outlined">account_tree</span>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="project-card">
+          <div class="card-text">
+            <h3>Easy Peasy App</h3>
+            <p>Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.</p>
+          </div>
+          <div class="card-actions">
+            <span class="material-icons-outlined">star_border</span>
+            <span class="material-icons-outlined">visibility</span>
+            <span class="material-icons-outlined">account_tree</span>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="project-card">
+          <div class="card-text">
+            <h3>Ad Blocker</h3>
+            <p>Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis. Aliquam sed malesuada eros.</p>
+          </div>
+          <div class="card-actions">
+            <span class="material-icons-outlined">star_border</span>
+            <span class="material-icons-outlined">visibility</span>
+            <span class="material-icons-outlined">account_tree</span>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="project-card">
+          <div class="card-text">
+            <h3>Money Maker</h3>
+            <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex. Pellentesque mollis nec sem vel aliquam.</p>
+          </div>
+          <div class="card-actions">
+            <span class="material-icons-outlined">star_border</span>
+            <span class="material-icons-outlined">visibility</span>
+            <span class="material-icons-outlined">account_tree</span>
+          </div>
+        </article>

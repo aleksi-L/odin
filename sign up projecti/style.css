@@ -1,6 +1,23 @@
-.kuva {
-    text-align: left;
+#wrapper{
+    width:100%;
+    overflow:auto;
+    position: absolute;
 }
-.tiedot{
-    text-align: right;
+#wrapper div{
+    width:30%;  
+    float:left;
+}
+
+#kuva{
+    float:left;
+}
+Body{
+    background-color: gainsboro;
+    
+}
+.grid{
+    background-color:white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
