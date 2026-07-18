@@ -12,7 +12,7 @@ yhdennessätoista opin compatibilitystä. mieleen jäi hyvin että on erittäin 
 kahdennessatoista opin miten framwork ja preprocessors toimii. minulle jäi hyvin mieleen että framework toimii kuin bootstrap
 kolmanessatoista opin form basics. mieleen jäi hyvin että form elementti hyväksyy kaksi olennaista attribuuttia.
 neljänessätoista opin form validationia. minulle jäi hyvin mieleen että tekstin pituutta voi helposti controlloida min/max attribuuttia käyttäen.
-
+databases tehätävässä tein SQL tutorialin 0-9
 
 # Github osio
 - kun sinulla on muutoksia ja haluat päivittää repositorisi githubiin:
