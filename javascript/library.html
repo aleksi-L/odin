@@ -7,17 +7,15 @@
 </head>
 <body>
  
-  <div id="library"></div>
+  <div id="myLibrary"></div>
 
   <button id="newbookbutton">New Book</button>
   
-  <input type="text" id="titleInput" required>
-      
-  <input type="text" id="authorInput" required>
+  <input type="text" id="title" value="Komisaario Palmu" required>
+  <input type="text" id="author" value="Mika Waltari" required>
+  <input type="number" id="pages" value=100 required>
 
-  <input type="number" id="pagesInput" required>
-  
-  <button type="submit">Add Book</button>
+  <button type="submit" onclick="addBookToLibrary(title, author, pages)">Add Book</button>
 
 </form>
   <script src="./library.js"></script> 

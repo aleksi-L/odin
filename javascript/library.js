@@ -1,19 +1,33 @@
+/* 
+  1. html, miten saadaan inputtien tiedot funktio kutsuun ja listättyä array taulukon jatkoksi. 
+  2. miten saat listan näkyville html:ssä, kun tiedot on syötetty. 
+  
+*/
+
 const myLibrary = [{
     title: "Tuntematon sotilas",
     author: "Väinö Linna",
-    pages: 500
-  },
-
+    pages: "500"
+  }
 ];
 
     function Book(title, author, pages) {
         this.title = title;
-        this.author = author;
+        this.author = author; 
+        this.pages =pages;
 }
 
 function addBookToLibrary(title, author, pages) {
-    const newBook = new Book(title, author);
+    
+    let a = document.getElementById("title").value;
+    let b = document.getElementById("author").value;
+    let c = document.getElementById("pages").value;
+
+    const newBook = new Book(a, b, c,);
+
     myLibrary.push(newBook);
+    
+    
 }
 
 function displayLibrary() {
@@ -26,4 +40,4 @@ myLibrary.forEach ((book, index) => {
   card.classList.add("book-card");
 });
 
-console.log("heippa maailma");
+
