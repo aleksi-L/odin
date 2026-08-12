@@ -1,10 +1,5 @@
 const myLibrary = [
-  {
-    title: "Tuntematon sotilas",
-    author: "Väinö Linna",
-    pages: "500",
-    isRead: false
-  }
+  new Book("Tuntematon sotilas", "Väinö Linna", "500")
 ];
 
 function Book(title, author, pages) {
@@ -41,7 +36,7 @@ function displayLibrary() {
       <p>${book.title}</p>
       <p>${book.author}</p>
       <p>${book.pages}</p>
-      <p>Status: ${book.isRead ? "Read" : "Not read"}</p>
+      <p>Read: ${book.isRead ? "true" : "false"}</p>
       <button onclick="removeBook(${index})">Remove</button>
       <button onclick="toggleReadStatus(${index})">Toggle Read Status</button>
     `;
