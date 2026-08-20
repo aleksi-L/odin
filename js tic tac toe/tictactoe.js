@@ -11,9 +11,8 @@ const Gameboard = (() => {
       return false;
     };
 
-    const reset = () => {
-      for (let i = 0; i < board.length; i++) board[i] = "";
-    };
+    const reset = () => board.fill(""); 
 
     return { getBoard, placeMarker, reset };
 })()
+
