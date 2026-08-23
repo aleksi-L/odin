@@ -1,19 +1,5 @@
-#wrapper{
-    width:100%;
-    overflow:auto;
-    position: absolute;
-}
-#wrapper div{
-    width:30%;  
-    float:left;
-}
-
-#kuva{
-    float:left;
-}
-Body{
-    background-color: gainsboro;
-    
+.kuva {
+    text-align: left;
 }
 .grid{
     background-color:white;
