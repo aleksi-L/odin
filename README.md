@@ -28,3 +28,5 @@ databases tehätävässä tein SQL tutorialin 0-9
 
 jos on hankala hahmottaa niin katso: github desktop
 
+lähteet
+https://www.geeksforgeeks.org/javascript/simple-tic-tac-toe-game-using-javascript/
