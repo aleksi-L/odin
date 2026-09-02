@@ -1,3 +1,20 @@
+let ruudut = [...document.querySelectorAll('.ruutu')];
+let resetbtn = document.querySelector('#reset');
+let turn0 = true;
+let uusipeliBtn = document.querySelector('#new-btn');
+let msgcontainer = document.querySelector('.msg-container');
+let msg = document.querySelector('#msg'); 
+
+const voittolinijat = [
+  [0,1,2],
+  [0,3,6],
+  [0,4,8],
+  [1,4,7],
+  [2,5,8],
+  [3,4,5],
+  [6,7,8],
+  [2,4,6],
+];
 const Gameboard = (() => {
     const board = Array(9).fill("");
 
@@ -18,29 +35,24 @@ const Gameboard = (() => {
     return { getBoard, placeMarker, reset };
 })()
 
-const voittolinijat = [
-  [0,1,2],
-  [0,3,6],
-  [0,4,8],
-  [1,4,7],
-  [2,5,8],
-  [3,4,5],
-  [6,7,8],
-  [2,4,6],
-]
+
 
 ruudut.forEach(ruutu => {
   ruutu.addEventListener('click', function () {
   if (turn0) {
   ruutu.innerText = 'O';
   turn0 = false;
+  console.log(turn0)
+tarkistavoittaja();
   }
  else {
   ruutu.innerText = 'X';
   turn0 = true;
-  }
+tarkistavoittaja();  
+}
   });
 });
+
 const enableruudut = () => {
   for (let ruutu of ruudut) {
       ruutu.disabled = false;
@@ -52,4 +64,33 @@ const disableruudut = () => {
   for (let ruutu of ruudut) {
       ruutu.disabled = true;
   }
+};
+
+const tarkistavoittaja = () => {
+  let haswin = false;
+  for (let pattern of voittolinijat) {
+    let pos1val =
+    ruudut[pattern[0]].innerText;
+    let pos2val =
+    ruudut[pattern[1]].innerText;
+    let pos3val
+    ruudut[pattern[2]].innerText;
+
+if ( pos1val !== "" &&
+  pos2val !==""&& pos3val!=="" 
+  && pos1val === pos2val &&
+  pos2val === pos3val){
+    näytävoittaja(pos1val);
+    haswin=true;
+    return;
+  }
+}
+  if (!haswin){
+    const kaikkiruudut  = [...ruudut].every((ruutu) => ruutu.innerText !=="");
+    
+    if (kaikkiruudut){
+      msgcontainer.classList.remove('hide');
+      msg.innerText = 'match drawn';
+      }
+    }
 };

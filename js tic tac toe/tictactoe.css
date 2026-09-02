@@ -13,3 +13,22 @@
   align-items: center;
   font-weight: bold;
 }
+/* 2. msg tyyli */
+#new-btn {
+  padding: 16px;
+  font-size: 20px;
+  background: black;
+  color: white;
+  border-radius: 16px;
+  border: none;
+}
+#msg{
+  font-size: 64px;
+  text-align: center;
+}
+.msg-container{
+  height: 240px;
+}
+.hide{
+  display: none;
+}
