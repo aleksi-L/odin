@@ -30,3 +30,11 @@ jos on hankala hahmottaa niin katso: github desktop
 
 lähteet
 https://www.geeksforgeeks.org/javascript/simple-tic-tac-toe-game-using-javascript/
+
+kotietehtvät
+
+makecode
+
+lukeminen
+
+tictactoe loppuun

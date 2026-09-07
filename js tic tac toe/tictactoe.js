@@ -69,8 +69,13 @@ const disableruudut = () => {
 };
 
 const näytävoittaja = (voittaja) => {
-  msg.innerText = `${voittaja} voitti`;
-  msgcontainer.classList.remove('hide');
+  let voittajanimi;
+  if (voittaja === "X") {
+    voittajanimi = pelaaja1.value || "Pelaaja X";}
+else {
+  voittajanimi = pelaaja2.value || "Pelaaja O";}
+  msg.innerText = `${voittajanimi} voitti!`;
+  msgcontainer.classList.remove("hide");
   disableruudut();
 };
 
@@ -101,9 +106,13 @@ if ( pos1val !== "" && pos2val !==""&& pos3val!==""
 };
 
 const uusipeli = () => {
-  turnO = true;
+  turn0 = true;
   enableruudut();
-  const msgcontainer = document.querySelector(".msg-container");
-  msgcontainer.classList.add('hide');
-}
-uusipelibtn.addEventListener('click', uusipeli);
+  msgcontainer.classList.add("hide");
+  };
+
+const result = document.querySelector("#tulos");
+const pelaaja1 = document.querySelector("#pelaaja1");
+const pelaaja2 = document.querySelector("#pelaaja2");
+
+uusibtn.addEventListener('click', uusipeli);
