@@ -1,0 +1,21 @@
+{
+  "name": "odin",
+  "version": "1.0.0",
+  "description": "Ensimmäisessä tehtävässä kävil läpi mitä tulen tekemään tulevaisuudessa.\r Toisessa tehtävässä opin emmetistä ja sen hyödyistä esim shortcuteista.\r Kolmannessa kävin läpi miten SVG toimii. Minulle jä hyvin mieleen se että SVG kuvien kokoa on helppo muuntaa.\r Neljännessä opin miten tables toimii. Minulle jäi hyvin mieleen että tablesia on helppo käyttää.\r Viidennessä opin CSS default styleistä. Minulle jäi hyvin mieleen että Voit kirjoittaa omat CSS säänöt.\r Kuudennessa opin CSS uniteista. Minulla jäy hyvin mieleen että absolute unitit pysyvät aina samana.\r Seitsemännessä opin miten fontin muutaminen CSSllä toimii. Minulle jäi hyvin mieleen ett' fallback on tärkeä.\r kahdeksannessa opin muita CSS properties. Minulle jä hyvin mieleen että background jakaantuu 8eri backgroundiin liityvään osioon.\r yhdenessä opin functioista. mieleen jäi hyvin että functiot ovat hyviä värien vaihtamiseen.\r kymenennessä opin properties. mieleen jäi hyvin että properties on hyvä esimerkikiksi lgiht ja drak teeman tekemiseen.\r yhdennessätoista opin compatibilitystä. mieleen jäi hyvin että on erittäin tärke ottaa huomioon muutkin selaimet kuin vain mitä käytät itse.\r kahdennessatoista opin miten framwork ja preprocessors toimii. minulle jäi hyvin mieleen että framework toimii kuin bootstrap\r kolmanessatoista opin form basics. mieleen jäi hyvin että form elementti hyväksyy kaksi olennaista attribuuttia.\r neljänessätoista opin form validationia. minulle jäi hyvin mieleen että tekstin pituutta voi helposti controlloida min/max attribuuttia käyttäen.\r databases tehätävässä tein SQL tutorialin 0-9",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksi-L/odin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/aleksi-L/odin/issues"
+  },
+  "homepage": "https://github.com/aleksi-L/odin#readme"
+}
