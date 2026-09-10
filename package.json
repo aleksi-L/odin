@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/aleksi-L/odin/issues"
   },
-  "homepage": "https://github.com/aleksi-L/odin#readme"
+  "homepage": "https://github.com/aleksi-L/odin#readme",
+  "devDependencies": {
+    "html-loader": "^5.1.0",
+    "webpack-cli": "^7.2.3",
+    "webpack-dev-server": "^6.0.0"
+  }
 }
